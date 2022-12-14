@@ -13,11 +13,29 @@ public class Main {
             System.out.println(year + " год не является високосным.");
         }
     }
+    public static void phoneLinkSelection(int clientOS, int clientDeviceYearCurrent){
+        int clientDeviceYear = 2015;
+        if (clientOS == 0 && clientDeviceYearCurrent > clientDeviceYear) {
+            System.out.println("Установите версию приложения для iOS по ссылке.");
+        } else if (clientOS == 0 && clientDeviceYearCurrent <= clientDeviceYear) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
+        } else if (clientOS == 1 && clientDeviceYearCurrent > clientDeviceYear) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else if(clientOS == 1 && clientDeviceYearCurrent <= clientDeviceYear) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке.");
+        }
+        }
     public static void main(String[] args) {
 
         System.out.println("Задача 1");
 
         int year = 2022;
         definitionOfLeapYear (year);
+
+        System.out.println("Задача 2");
+
+        int clientOS = 0;
+        int clientDeviceYearCurrent = 2016;
+        phoneLinkSelection(clientOS, clientDeviceYearCurrent);
     }
 }
