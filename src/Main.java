@@ -24,7 +24,11 @@ public class Main {
         } else if(clientOS == 1 && clientDeviceYearCurrent <= clientDeviceYear) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке.");
         }
-        }
+    }
+    public static void deliveryDaysCalculation(int deliveryDistance){
+        int timeOfDelivery = 1 + (deliveryDistance + 19) / 40;
+        System.out.println("Потребуется дней для доставки: " + timeOfDelivery);
+    }
     public static void main(String[] args) {
 
         System.out.println("Задача 1");
@@ -37,5 +41,10 @@ public class Main {
         int clientOS = 0;
         int clientDeviceYearCurrent = 2016;
         phoneLinkSelection(clientOS, clientDeviceYearCurrent);
+
+        System.out.println("Задача 3");
+
+        int deliveryDistance = 95;
+        deliveryDaysCalculation(deliveryDistance);
     }
 }
